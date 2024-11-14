@@ -1,20 +1,18 @@
 package loja.repository;
 
-import loja.model.Loja;
+import loja.model.Produtos;
 
 public interface LojaRepository {
-	// CRUD da Conta
-	public void procurarPorNumero(int numero);
 
-	public void listarTodos();
+	void procurarPorNumero(int numero);
 
-	public void cadastrar(Loja loja);
+	void listarTodos();
 
-	public void atualizar(Loja loja);
+	void cadastrar(Produtos loja);
 
-	public void deletar(int numero);
+	void atualizar(Produtos loja);
 
-	// Métodos de pagamento
-	public void comprar(int numero, float valor);
+	void deletar(int numero);
 
+	void comprar(int numero, float valor);
 }
