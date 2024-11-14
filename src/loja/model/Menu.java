@@ -1,4 +1,4 @@
-package loja;
+package loja.model;
 
 import java.util.Scanner;
 
@@ -12,6 +12,17 @@ public class Menu {
 
 		int opcao;
 
+		Pagamento credito = new Pagamento(1, 1, "Nike Air", "Domingos Vicente", 850.0f, 00.0f); 
+		Pagamento debito = new Pagamento(1, 2, "Air Jordan", "António Vieira", 850.0f, 1000.0f); 
+
+		credito.visualizar();
+		credito.comprar(850.0f); 
+		credito.visualizar();
+
+		debito.visualizar();
+		debito.comprar(00); 
+		debito.visualizar();
+		
 		while (true) {
 			System.out.println("************************************************************************");
 			System.out.println("************************************************************************");
@@ -21,9 +32,12 @@ public class Menu {
 			System.out.println("                         ➕ 1 - Cadastrar produtos                      ");
 			System.out.println("                         📋 2 - Listar todas os produtos                ");
 			System.out.println("                         🔎 3 - Buscar produto por número               ");
-			System.out.println("                         ✏ 4 - Atualizar dados do produto              " + Cores.DEFAULT);
-			System.out.println(Cores.RED + "                         🗑 5 - Apagar produto                          " + Cores.DEFAULT);
-			System.out.println("                         🛒 6 - comprar                                 " + Cores.DEFAULT);
+			System.out
+					.println("                         ✏ 4 - Atualizar dados do produto              " + Cores.DEFAULT);
+			System.out.println(Cores.RED + "                         🗑 5 - Apagar produto                          "
+					+ Cores.DEFAULT);
+			System.out.println(
+					"                         🛒 6 - comprar                                 " + Cores.DEFAULT);
 			System.out.println(Cores.RED + "                         ⬅ 7 - Sair                                    ");
 			System.out.println("                                                     " + Cores.DEFAULT);
 			System.out.println("*************************************************************************");
